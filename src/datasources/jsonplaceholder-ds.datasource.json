@@ -1,0 +1,10 @@
+{
+  "name": "jsonplaceholderDs",
+  "connector": "mssql",
+  "url": "",
+  "host": "localhost",
+  "port": 1433,
+  "user": "sa",
+  "password": "cbellodev92",
+  "database": "jsonplaceholder"
+}
