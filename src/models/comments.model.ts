@@ -1,5 +1,4 @@
-import { Entity, model, belongsTo, property } from '@loopback/repository';
-import { Posts } from '../models';
+import { Entity, model, property } from '@loopback/repository';
 
 @model()
 export class Comments extends Entity {
@@ -8,6 +7,11 @@ export class Comments extends Entity {
     id: true,
   })
   id: number;
+
+  @property({
+    type: 'number',
+  })
+  postid: number;
 
   @property({
     type: 'string',
@@ -23,12 +27,6 @@ export class Comments extends Entity {
     type: 'string',
   })
   body?: string;
-
-  @property({
-    type: 'number',
-  })
-  postid: number;
-
 
   constructor(data?: Partial<Comments>) {
     super(data);

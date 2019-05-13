@@ -20,7 +20,7 @@ export class Albums extends Entity {
   title?: string;
 
   @hasMany(() => Photos, { keyTo: 'albumid' })
-  Photos?: Photos[];
+  photos?: Photos[];
 
   constructor(data?: Partial<Albums>) {
     super(data);
